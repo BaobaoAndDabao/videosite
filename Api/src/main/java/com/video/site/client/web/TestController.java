@@ -1,4 +1,4 @@
-package client.web;
+package com.video.site.client.web;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
