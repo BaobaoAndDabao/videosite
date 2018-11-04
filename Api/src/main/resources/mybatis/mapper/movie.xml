@@ -15,7 +15,7 @@
     <select id="getMovieById" resultMap="resultMap"  >
         SELECT
         <include refid="colums" />
-        FROM MOVIE t where t.id = #{id}
+        FROM movie t where t.id = #{id}
     </select>
 
  <!--   <select id="getOne" parameterType="java.lang.Long" resultMap="BaseResultMap" >

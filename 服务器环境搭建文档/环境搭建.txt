@@ -1,0 +1,41 @@
+安装jdk
+1.检查系统原版并卸载
+# rpm -qa | grep java
+# rpm -qa | grep jdk
+
+如果已经安装了jdk，使用如下命令卸载，yum会自动检测，卸载删除jdk的相关安装包
+# yum -y remove java*
+# yum -y remove jdk*
+
+2.jdk安装
+
+查看java相关列表（jdk版本信息），安装的是openjdk1.8.0191
+
+# yum list | grep jdk
+
+使用如下命令安装jdk
+
+# yum -y install java-1.8.0-openjdk.x86_64 java-1.8.0-openjdk-devel.x86_64
+
+3.配置环境变量
+
+yum 方式安装的jdk默认路径为/usr/lib/jvm，切换到该目录下查看jdk
+
+使用 vim 或 vi 编辑器打开文件/etc/profile
+
+# vim /etc/profile
+# vi /etc/profile
+
+在文件尾部，添加如下内容
+
+export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tool.jar
+
+然后使用如下命令，使环境变量立即生效
+
+#　source /etc/profile
+
+4.验证安装是否成功
+java -version
+
