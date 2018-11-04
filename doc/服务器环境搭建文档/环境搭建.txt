@@ -192,5 +192,5 @@ netstat -anp
 /project/start.sh
 
 关闭项目
-ps -ef | grep api
-kill -s 9 1827
+ps -ef | grep Api
+kill -s 9 进程号
