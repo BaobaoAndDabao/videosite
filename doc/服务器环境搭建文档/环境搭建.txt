@@ -188,9 +188,21 @@ netstat -anp
 
 ③项目部署
 开发环境 先对父类项目进行insatll，再对api模块package获得jar，上传到服务器的project目录下，执行命令即可。
+
 运行命令
-/project/start.sh
+cd /project
+bash start.sh
 
 关闭项目
 ps -ef | grep Api
 kill -s 9 进程号
+
+
+④代码提交
+
+添加
+git add .
+提交
+git commit
+推送
+git push
