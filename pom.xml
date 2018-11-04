@@ -71,21 +71,17 @@
             <version>1.1.0</version>
         </dependency>
     </dependencies>
-
-    <build>
-
+<!--父文件打包不能用这个-->
+  <!--  <build>
         <plugins>
-
             <plugin>
-
                 <groupId>org.springframework.boot</groupId>
-
                 <artifactId>spring-boot-maven-plugin</artifactId>
-
+                <configuration>
+                    <fork>true</fork>
+                </configuration>
             </plugin>
-
         </plugins>
-
-    </build>
+    </build>-->
 
 </project>
